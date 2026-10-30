@@ -1,0 +1,1108 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="lang-ar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <meta name="description" content="كليكا ديجيتال: استوديو تصميم مواقع، تأجير مواقع، خرائط جوجل، أرشفة محركات البحث، منصات تعليمية، متاجر إلكترونية، تطبيقات موبايل، وإعلانات جوجل وميتا." />
+  <meta name="theme-color" content="#000000" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https: blob:; media-src 'self' data: blob:; connect-src 'self' https:;" />
+  <title>كليكا ديجيتال — استوديو تجارب وحلول رقمية متكاملة</title>
+
+  <!-- Favicon: Authentic KLIKA Mark SVG -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23000000'/%3E%3Crect x='14' y='12' width='10' height='40' rx='5' fill='%231ea6f6'/%3E%3Cpath d='M30 14 C36 14 48 20 48 28 C48 34 38 40 30 40 Z' fill='%237f52f5'/%3E%3Cpath d='M32 40 C36 34 44 34 46 42 C48 48 40 52 34 50 Z' fill='%2316e4cb'/%3E%3C/svg%3E" />
+
+  <!-- Preconnect External Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- GSAP & ScrollTrigger -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+  <!-- Lenis Smooth Scroll -->
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+</head>
+<body>
+
+  <!-- ─── AMBIENT DYNAMIC AURORA & CHROMATIC MESH BACKGROUND ───────────── -->
+  <div class="ambient-background" id="ambient-bg" aria-hidden="true">
+    <div class="ambient-orb orb-1"></div>
+    <div class="ambient-orb orb-2"></div>
+    <div class="ambient-orb orb-3"></div>
+    <div class="ambient-orb orb-4"></div>
+    <div class="ambient-grid"></div>
+    <div class="ambient-spotlight" id="ambient-spotlight"></div>
+  </div>
+
+  <!-- Audio Soundscape -->
+  <audio id="brand-audio" loop preload="metadata">
+    <source src="klika_assets/audio.mp3" type="audio/mpeg" />
+  </audio>
+
+  <!-- ─── REAL PRELOADER ─────────────────────────────────────────────────── -->
+  <aside id="preloader" role="progressbar" aria-label="KLIKA Digital Loading Assets" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+    <div class="preloader-inner">
+      <div class="preloader-symbol" aria-hidden="true">
+        <svg viewBox="0 0 64 64" width="48" height="48">
+          <rect x="14" y="12" width="10" height="40" rx="5" fill="#1ea6f6" />
+          <path d="M30 14 C36 14 48 20 48 28 C48 34 38 40 30 40 Z" fill="#7f52f5" />
+          <path d="M32 40 C36 34 44 34 46 42 C48 48 40 52 34 50 Z" fill="#16e4cb" />
+        </svg>
+      </div>
+      <h2 class="preloader-title">KLIKA DIGITAL</h2>
+      <div class="preloader-bar-track">
+        <div class="preloader-bar-fill" id="preloader-bar"></div>
+      </div>
+      <div class="preloader-status">
+        <span id="preloader-frame-count">FRAME 001 / 143</span>
+        <span id="preloader-percent">0%</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ─── SITE HEADER ────────────────────────────────────────────────────── -->
+  <header class="site-header" id="site-header">
+    <div class="header-brand">
+      <a href="#hero-stage" class="header-logo-link" aria-label="KLIKA DIGITAL Home">
+        <svg class="header-logo-svg" viewBox="0 0 64 64">
+          <rect x="14" y="12" width="10" height="40" rx="5" fill="#1ea6f6" />
+          <path d="M30 14 C36 14 48 20 48 28 C48 34 38 40 30 40 Z" fill="#7f52f5" />
+          <path d="M32 40 C36 34 44 34 46 42 C48 48 40 52 34 50 Z" fill="#16e4cb" />
+        </svg>
+      </a>
+      <div class="header-title-wrap">
+        <a href="#hero-stage" class="header-brand-name">KLIKA DIGITAL</a>
+        <span class="header-brand-badge" data-i18n="heroBadge">استوديو رقمي · 2026</span>
+      </div>
+    </div>
+
+    <!-- Desktop Navigation -->
+    <nav class="header-nav" aria-label="Main Navigation">
+      <a href="#services" class="nav-link" data-i18n="navServices">خدماتنا</a>
+      <a href="#standard" class="nav-link" data-i18n="navStandard">معيار كليكا</a>
+      <a href="#craft" class="nav-link" data-i18n="navCraft">الصنعة</a>
+      <a href="#how-it-works" class="nav-link" data-i18n="navHow">طريقة العمل</a>
+      <a href="#blog" class="nav-link" data-i18n="navBlog">المدونة</a>
+      <a href="#contact" class="nav-link" data-i18n="navContact">تواصل</a>
+    </nav>
+
+    <!-- Header Actions -->
+    <div class="header-actions">
+      <!-- Reassemble Logo Button -->
+      <button class="btn-lang" id="btn-header-reassemble" title="Reassemble Logo" aria-label="Reassemble Logo">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" />
+          <path d="M3 3v5h5" />
+        </svg>
+      </button>
+
+      <!-- Language Switch -->
+      <button class="btn-lang" id="btn-lang-switch" aria-label="Switch Language">EN</button>
+
+      <!-- Primary CTA -->
+      <button class="btn-header-cta" data-open-modal="web-design" data-i18n="ctaStart">
+        ابدأ مشروعك
+      </button>
+
+      <!-- Mobile Menu Toggle -->
+      <button class="btn-menu-toggle" id="btn-menu-toggle" aria-label="Toggle Mobile Navigation">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="drawer-backdrop" id="drawer-backdrop"></div>
+  <aside class="mobile-drawer" id="mobile-drawer" aria-label="Mobile Navigation Drawer">
+    <div class="drawer-header">
+      <span class="header-brand-name">KLIKA DIGITAL</span>
+      <button class="btn-menu-toggle" id="btn-drawer-close" aria-label="Close Mobile Navigation">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    <nav class="drawer-links">
+      <a href="#services" class="drawer-link" data-i18n="navServices">خدماتنا</a>
+      <a href="#standard" class="drawer-link" data-i18n="navStandard">معيار كليكا</a>
+      <a href="#craft" class="drawer-link" data-i18n="navCraft">الصنعة</a>
+      <a href="#how-it-works" class="drawer-link" data-i18n="navHow">طريقة العمل</a>
+      <a href="#blog" class="drawer-link" data-i18n="navBlog">المدونة</a>
+      <a href="#contact" class="drawer-link" data-i18n="navContact">تواصل</a>
+    </nav>
+    <div class="drawer-footer">
+      <button class="btn-lang" id="mobile-lang-switch">English</button>
+      <button class="btn-primary-large" data-open-modal="web-design" data-i18n="ctaStart">
+        ابدأ مشروعك
+      </button>
+    </div>
+  </aside>
+
+  <!-- ─── HERO 3D SCROLL EXPERIENCE ──────────────────────────────────────────── -->
+  <main id="main-content">
+    <section class="hero-scroll-track" id="hero-track">
+      <div class="hero-sticky-stage" id="hero-stage">
+
+        <!-- Dedicated HTML5 3D Logo Canvas -->
+        <canvas id="hero-canvas" width="1920" height="1080" aria-label="KLIKA DIGITAL 3D Logo Visualizer Canvas"></canvas>
+
+        <!-- 4 Narrative Storytelling Chapters Overlay -->
+        <div class="chapters-overlay" id="chapters-overlay">
+
+          <!-- Chapter 01: The Identity -->
+          <article class="chapter-card pos-start active" id="chapter-1">
+            <div class="chapter-panel">
+              <span class="chapter-eyebrow" data-i18n="ch1Eyebrow">
+                <svg width="6" height="6" viewBox="0 0 6 6"><circle cx="3" cy="3" r="3" fill="#1ea6f6" /></svg>
+                01 // الهوية — THE IDENTITY
+              </span>
+              <h1 class="chapter-headline" data-i18n="ch1Title">نصمم تجارب رقمية.</h1>
+              <p class="chapter-body" data-i18n="ch1Body">كل علامة تجارية تبدأ بهوية متقنة ومدروسة. كليكا تجمع الدقة الهندسية مع التميز البصري لصناعة حضور رقمي يأسر الأنظار ويثبت في الذاكرة.</p>
+              <div class="chapter-specs-row">
+                <span data-i18n="ch1Spec1">الهيئة: <strong>شعار موحد</strong></span>
+                <span data-i18n="ch1Spec2">التوازن: <strong>هندسي كامل</strong></span>
+              </div>
+              <div class="chapter-cta-row">
+                <button class="btn-chapter-primary" data-open-modal="web-design" data-i18n="heroCtaPrimary">
+                  ابدأ مشروعك الآن
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Chapter 02: Transformation -->
+          <article class="chapter-card pos-end" id="chapter-2">
+            <div class="chapter-panel">
+              <span class="chapter-eyebrow" data-i18n="ch2Eyebrow">
+                <svg width="6" height="6" viewBox="0 0 6 6"><circle cx="3" cy="3" r="3" fill="#7f52f5" /></svg>
+                02 // التحول — TRANSFORMATION
+              </span>
+              <h2 class="chapter-headline" data-i18n="ch2Title">نبني حلولًا تناسب أهداف أعمالك.</h2>
+              <p class="chapter-body" data-i18n="ch2Body">نفكك التعقيدات التصميمية والتقنية لنبني مواقع، وتطبيقات، ومتاجر إلكترونية مصممة خصيصاً لتحقيق نتائج ملموسة وتحويل الزوار إلى عملاء.</p>
+              <div class="chapter-specs-row">
+                <span data-i18n="ch2Spec1">الطبقات: <strong>إزاحة محورية</strong></span>
+                <span data-i18n="ch2Spec2">الهندسة: <strong>ثلاثية الأبعاد</strong></span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Chapter 03: Meaning & Purpose -->
+          <article class="chapter-card pos-start" id="chapter-3">
+            <div class="chapter-panel">
+              <span class="chapter-eyebrow" data-i18n="ch3Eyebrow">
+                <svg width="6" height="6" viewBox="0 0 6 6"><circle cx="3" cy="3" r="3" fill="#16e4cb" /></svg>
+                03 // المعنى والعمق — PURPOSE & MEANING
+              </span>
+              <h2 class="chapter-headline" data-i18n="ch3Title">نساعد علامتك التجارية على النمو.</h2>
+              <p class="chapter-body" data-i18n="ch3Body">الصنعة الحقيقية لا تنتهي عند الإطلاق. نوفر منظومة نمو متكاملة تشمل الأرشفة وخرائط جوجل والحملات الإعلانية المدفوعة لجلب عملاء حقيقيين ومستمرين.</p>
+              <div class="chapter-specs-row">
+                <span data-i18n="ch3Spec1">العمق: <strong>طبقي متعدد المستويات</strong></span>
+                <span data-i18n="ch3Spec2">النمو: <strong>عائد استثماري مستدام</strong></span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Chapter 04: Complete Perspective & Transition -->
+          <article class="chapter-card pos-end" id="chapter-4">
+            <div class="chapter-panel">
+              <span class="chapter-eyebrow" data-i18n="ch4Eyebrow">
+                <svg width="6" height="6" viewBox="0 0 6 6"><circle cx="3" cy="3" r="3" fill="#ffffff" /></svg>
+                04 // الانتقال — COMPLETE PERSPECTIVE
+              </span>
+              <h2 class="chapter-headline" data-i18n="ch4Title">كل تفصيل له مكانه وهدفه.</h2>
+              <p class="chapter-body" data-i18n="ch4Body">من الشعار إلى المنصة المتكاملة؛ نلتزم بأعلى معايير الإتقان الرقمي. تصفح خدماتنا التسع واختر المسار الذي يحقق طموحك القادم.</p>
+              <div class="chapter-specs-row">
+                <span data-i18n="ch4Spec1">الدقة: <strong>2K CGI Master</strong></span>
+                <span data-i18n="ch4Spec2">الحالة: <strong>جاهز للانطلاق</strong></span>
+              </div>
+              <div class="chapter-cta-row">
+                <a href="#services" class="btn-chapter-primary" data-i18n="heroCtaSecondary">
+                  استكشف الخدمات
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Interactive Scrubber & Timeline HUD -->
+        <div class="hero-bottom-bar">
+          <div class="scrubber-card">
+            <div class="scrubber-controls">
+              <!-- Play / Pause -->
+              <button class="ctrl-btn" id="btn-play-pause" title="Play / Pause Animation" aria-label="Play animation">
+                <svg id="icon-play" viewBox="0 0 24 24" width="12" height="12" fill="currentColor">
+                  <polygon points="5 3 19 12 5 21 5 3" />
+                </svg>
+                <svg id="icon-pause" style="display:none;" viewBox="0 0 24 24" width="12" height="12" fill="currentColor">
+                  <rect x="6" y="4" width="4" height="16" />
+                  <rect x="14" y="4" width="4" height="16" />
+                </svg>
+              </button>
+              <!-- Reverse / Reassemble -->
+              <button class="ctrl-btn" id="btn-reverse-action" title="Reassemble Logo to Start" aria-label="Reassemble to assembled state">
+                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="11 19 2 12 11 5 11 19" />
+                  <polygon points="22 19 13 12 22 5 22 19" />
+                </svg>
+              </button>
+            </div>
+
+            <div class="scrubber-slider-wrap">
+              <input type="range" id="frame-scrubber" min="1" max="143" value="1" step="1" aria-label="Animation Frame Scrubber" class="scrubber-input" />
+            </div>
+
+            <div class="scrubber-readout" id="scrubber-readout">001 / 143</div>
+          </div>
+
+          <!-- HUD Telemetry Cluster -->
+          <div class="hero-hud-cluster">
+            <div class="hud-pill hide-mobile">
+              <span class="hud-dot" id="hud-dot"></span>
+              <span id="hud-status-text" data-i18n="hudAssembled">الشعار مجمّع</span>
+            </div>
+
+            <!-- Audio Toggle Pill -->
+            <button class="hud-pill btn-audio" id="btn-audio-toggle" aria-label="Toggle Soundscape">
+              <svg id="icon-sound-off" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                <line x1="23" y1="9" x2="17" y2="15"></line>
+                <line x1="17" y1="9" x2="23" y2="15"></line>
+              </svg>
+              <svg id="icon-sound-on" style="display:none;" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+              </svg>
+              <span id="audio-status-label" data-i18n="audioOff">مكتوم</span>
+            </button>
+          </div>
+
+          <!-- Scroll Hint -->
+          <div class="scroll-hint" id="scroll-hint">
+            <span data-i18n="scrollHint">مرّر لتفكيك الأبعاد واستكشاف القصة</span>
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M7 10l5 5 5-5"/>
+            </svg>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ─── SERVICE MARQUEE ────────────────────────────────────────────────── -->
+    <section class="marquee-section" id="marquee" aria-label="KLIKA Digital Services Ticker">
+      <div class="marquee-container">
+        <div class="marquee-track">
+          <!-- Populated dynamically via translations -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── KLIKA BRAND STANDARD SECTION ───────────────────────────────────── -->
+    <section class="section-wrap" id="standard">
+      <div class="section-header">
+        <span class="section-eyebrow" data-i18n="standardEyebrow">
+          <svg width="6" height="6" viewBox="0 0 6 6"><circle cx="3" cy="3" r="3" fill="#1ea6f6" /></svg>
+          معيار كليكا
+        </span>
+        <h2 class="section-heading" data-i18n="standardHeading">استوديو رقمي كامل — مو صفحة هبوط خفيفة</h2>
+        <p class="section-lead" data-i18n="standardLead">مسارات طلب لكل خدمة، ومدونة تنشر منها المعرفة، وتجربة رقمية متكاملة تشغّل كل أبعاد مشروعك باحترافية.</p>
+      </div>
+
+      <div class="standard-grid">
+        <!-- Principle 01 -->
+        <div class="standard-card">
+          <div class="standard-card-top">
+            <span class="standard-num" data-i18n="principle1Num">01</span>
+            <span class="standard-badge" data-i18n="principle1Badge">تصميم مخصص 100%</span>
+          </div>
+          <div>
+            <h3 class="standard-title" data-i18n="principle1Title">صنعة تبدأ من الهوية</h3>
+            <p class="standard-desc" data-i18n="principle1Desc">واجهات تحمل هويتك بالعربي والإنجليزي، مصممة من الصفر بدون قوالب جاهزة، مع تفاصيل دقيقة تنعكس في تجربة الاستخدام.</p>
+          </div>
+          <div class="standard-visual-box">
+            <div class="standard-spec-pill"><span></span> ARABIC RTL: Alexandria Modern</div>
+            <div class="standard-spec-pill"><span></span> ENGLISH LTR: Plus Jakarta Sans</div>
+            <div class="standard-spec-pill"><span></span> 100% Bespoke Design Systems</div>
+          </div>
+        </div>
+
+        <!-- Principle 02 -->
+        <div class="standard-card">
+          <div class="standard-card-top">
+            <span class="standard-num" data-i18n="principle2Num">02</span>
+            <span class="standard-badge" data-i18n="principle2Badge">نماذج مخصصة لكل خدمة</span>
+          </div>
+          <div>
+            <h3 class="standard-title" data-i18n="principle2Title">الملخص الصح بحقوله</h3>
+            <p class="standard-desc" data-i18n="principle2Desc">الإعلانات تسأل عن الميزانية والمنصات. التصميم يطلب الشعار والهوية. كل خدمة لها نموذجها المخصص لضمان استيعاب مشروعك بدقة.</p>
+          </div>
+          <div class="standard-visual-box">
+            <div class="standard-spec-pill"><span></span> Web Design: Architecture & Branding</div>
+            <div class="standard-spec-pill"><span></span> Google/Meta Ads: Targets & Ad Spend</div>
+            <div class="standard-spec-pill"><span></span> Zero Irrelevant Input Drag</div>
+          </div>
+        </div>
+
+        <!-- Principle 03 -->
+        <div class="standard-card">
+          <div class="standard-card-top">
+            <span class="standard-num" data-i18n="principle3Num">03</span>
+            <span class="standard-badge" data-i18n="principle3Badge">منظومة نمو متكاملة</span>
+          </div>
+          <div>
+            <h3 class="standard-title" data-i18n="principle3Title">نمو بعد الإطلاق</h3>
+            <p class="standard-desc" data-i18n="principle3Desc">أرشفة محركات بحث وخرائط جوجل وحملات إعلانية مبنية على أرقام واضحة لتبقى علامتك مرئية وتجذب العملاء بشكل دائم.</p>
+          </div>
+          <div class="standard-visual-box">
+            <div class="standard-spec-pill"><span></span> Organic SEO Crawl Dominance</div>
+            <div class="standard-spec-pill"><span></span> Google Maps 5.0 Local Pack</div>
+            <div class="standard-spec-pill"><span></span> Sustained Client Pipeline</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── 9 SERVICES SECTION ──────────────────────────────────────────────── -->
+    <section class="section-wrap" id="services">
+      <div class="section-header">
+        <span class="section-eyebrow" data-i18n="servicesEyebrow">
+          <svg width="6" height="6" viewBox="0 0 6 6"><circle cx="3" cy="3" r="3" fill="#1ea6f6" /></svg>
+          خدماتنا التسع المتخصصة
+        </span>
+        <h2 class="section-heading" data-i18n="servicesHeading">حلول رقمية مصممة للنمو والتحويل</h2>
+        <p class="section-lead" data-i18n="servicesLead">نقدم 9 خدمات رقمية أساسية، كل واحدة منها تحظى بفريق متمرس ونموذج عمل مخصص يلائم متطلباتك وميزانيتك.</p>
+      </div>
+
+      <div class="services-container">
+
+        <!-- Service 01: Website Design -->
+        <article class="service-card-showcase" id="service-web-design">
+          <div class="service-content-col">
+            <div class="service-meta-top">
+              <span class="service-tag">01 // BESPOKE DESIGN</span>
+              <span class="service-badge-pill" data-i18n="s1Feature1">ثنائية اللغة</span>
+            </div>
+            <div class="service-heading-wrap">
+              <h3 class="service-main-title" data-i18n="s1Title">تصميم مواقع</h3>
+              <span class="service-sub-title" data-i18n="s1Sub">Website Design</span>
+            </div>
+            <p class="service-short-desc" data-i18n="s1Desc">مواقع مخصّصة بمظهر قوي وتحويل الزوار.</p>
+            <p class="service-long-desc" data-i18n="s1LongDesc">تصميم واجهات وتجارب استخدام مصممة خصيصاً لتعكس هويتك التجارية وتلفت انتباه جمهورك المستهدف، مع تركيز دقيق على سرعة التحميل والتحويل.</p>
+            <ul class="service-features-list">
+              <li data-i18n="s1Feature1">تصميم وهوية ثنائية اللغة (عربي / إنجليزي)</li>
+              <li data-i18n="s1Feature2">متجاوب بالكامل مع كافة الشاشات والأجهزة</li>
+              <li data-i18n="s1Feature3">كود فائق السرعة ومحسن للأرشفة ومحركات البحث</li>
+            </ul>
+            <div class="service-action-wrap">
+              <button class="btn-service-request" data-open-modal="web-design" data-i18n="serviceCtaText">طلب هذه الخدمة</button>
+            </div>
+          </div>
+          <div class="service-preview-col">
+            <div class="mockup-browser">
+              <div class="mockup-browser-bar">
+                <div class="mockup-dots">
+                  <span class="mockup-dot"></span>
+                  <span class="mockup-dot"></span>
+                  <span class="mockup-dot"></span>
+                </div>
+                <div class="mockup-address">https://yourbrand.com</div>
+              </div>
+              <div class="mockup-browser-body" id="web-preview-mockup">
+                <div class="browser-hero-preview">
+                  <div class="bp-bar accent"></div>
+                  <div class="bp-bar" style="width: 80%;"></div>
+                  <div class="bp-bar" style="width: 45%;"></div>
+                </div>
+                <div class="bp-grid">
+                  <div class="bp-card"></div>
+                  <div class="bp-card"></div>
+                  <div class="bp-card"></div>
+                </div>
+              </div>
+            </div>
+            <div class="mockup-controls-row">
+              <button class="btn-pill-toggle" id="wireframe-toggle-btn">WIREFRAME TOGGLE</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Service 02: Website Rental -->
+        <article class="service-card-showcase" id="service-web-rental">
+          <div class="service-content-col">
+            <div class="service-meta-top">
+              <span class="service-tag">02 // MANAGED RENTAL</span>
+              <span class="service-badge-pill" data-i18n="s2Feature1">اشتراك مرن</span>
+            </div>
+            <div class="service-heading-wrap">
+              <h3 class="service-main-title" data-i18n="s2Title">تأجير مواقع</h3>
+              <span class="service-sub-title" data-i18n="s2Sub">Website Rental</span>
+            </div>
+            <p class="service-short-desc" data-i18n="s2Desc">موقع احترافي بدون تكلفة بناء كاملة.</p>
+            <p class="service-long-desc" data-i18n="s2LongDesc">نموذج اشتراك مرن يتيح لشركتك امتلاك موقع حديث ومتكامل مع استضافة وصيانة مستمرة وتحديثات أمان دون الحاجة لدفع تكلفة بناء باهظة مقدماً.</p>
+            <ul class="service-features-list">
+              <li data-i18n="s2Feature1">اشتراك شهري أو سنوي بدون أعباء رأسمالية</li>
+              <li data-i18n="s2Feature2">استضافة سحابية مدارة مع نسخ احتياطي دوري</li>
+              <li data-i18n="s2Feature3">دعم فني وتحديثات مستمرة متضمنة في الباقة</li>
+            </ul>
+            <div class="service-action-wrap">
+              <button class="btn-service-request" data-open-modal="web-rental" data-i18n="serviceCtaText">طلب هذه الخدمة</button>
+            </div>
+          </div>
+          <div class="service-preview-col">
+            <div class="rental-simulator-card">
+              <div class="rental-sim-header">
+                <span style="font-size:12px; font-weight:700; color:var(--text-main);">MANAGED TIER</span>
+                <span class="rental-sla-tag">● 99.99% UPTIME SLA</span>
+              </div>
+              <div class="rental-price-row">
+                <span class="rental-currency">SAR</span>
+                <span class="rental-amount" id="rental-price-display">390</span>
+                <span class="rental-term" id="rental-cycle-label">/ شهر (فاتورة سنوية)</span>
+              </div>
+              <div class="rental-cycle-switch">
+                <label>
+                  <input type="radio" name="rental-cycle" value="annual" checked>
+                  <span>سنوي (توفير 20%)</span>
+                </label>
+                <label>
+                  <input type="radio" name="rental-cycle" value="monthly">
+                  <span>شهري مرن</span>
+                </label>
+              </div>
+              <div class="rental-sim-features">
+                <div>✔ استضافة سحابية مدارة + شهادة SSL مجانية</div>
+                <div>✔ نسخ احتياطي يومي آلي وتأمين ضد الاختراق</div>
+                <div>✔ تعديلات المحتوى وتحديثات الأمان مشمولة</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Service 03: Google Maps -->
+        <article class="service-card-showcase" id="service-google-maps">
+          <div class="service-content-col">
+            <div class="service-meta-top">
+              <span class="service-tag">03 // LOCAL SEO</span>
+              <span class="service-badge-pill" data-i18n="s3Feature1">توثيق وظهور</span>
+            </div>
+            <div class="service-heading-wrap">
+              <h3 class="service-main-title" data-i18n="s3Title">خرائط جوجل</h3>
+              <span class="service-sub-title" data-i18n="s3Sub">Google Maps</span>
+            </div>
+            <p class="service-short-desc" data-i18n="s3Desc">ظهور محلي للعملاء القريبين.</p>
+            <p class="service-long-desc" data-i18n="s3LongDesc">تهيئة وإدارة ملف شركتك على Google Business Profile لضمان تصدرك للنتائج المحلية وجذب الزوار القريبين في مدينتك ومنطقتك الجغرافية.</p>
+            <ul class="service-features-list">
+              <li data-i18n="s3Feature1">توثيق وضبط بيانات العنوان وأوقات العمل بدقة</li>
+              <li data-i18n="s3Feature2">استراتيجية إدارة التقييمات وردود العملاء</li>
+              <li data-i18n="s3Feature3">تحسين الصور والكلمات المفتاحية للظهور المحلي</li>
+            </ul>
+            <div class="service-action-wrap">
+              <button class="btn-service-request" data-open-modal="google-maps" data-i18n="serviceCtaText">طلب هذه الخدمة</button>
+            </div>
+          </div>
+          <div class="service-preview-col">
+            <div class="maps-preview-card">
+              <div class="maps-pin-row">
+                <div class="maps-pin-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="maps-biz-name">Your Business Profile</h4>
+                  <div class="maps-rating-row">
+                    <span>★★★★★ 5.0</span>
+                    <span style="color:var(--text-tertiary);">(128 reviews)</span>
+                  </div>
+                </div>
+              </div>
+              <div style="font-size:12px; color:var(--text-secondary);">
+                📍 شارع الملك فهد، الرياض · مفتوح الآن
+              </div>
+              <div class="maps-actions-row">
+                <div class="maps-action-btn">📞 اتصال</div>
+                <div class="maps-action-btn">🧭 الاتجاهات</div>
+                <div class="maps-action-btn">🌐 الموقع</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Service 04: SEO -->
+        <article class="service-card-showcase" id="service-seo">
+          <div class="service-content-col">
+            <div class="service-meta-top">
+              <span class="service-tag">04 // ORGANIC REACH</span>
+              <span class="service-badge-pill" data-i18n="s4Feature1">فحص فني</span>
+            </div>
+            <div class="service-heading-wrap">
+              <h3 class="service-main-title" data-i18n="s4Title">أرشفة مواقع</h3>
+              <span class="service-sub-title" data-i18n="s4Sub">SEO</span>
+            </div>
+            <p class="service-short-desc" data-i18n="s4Desc">فهرسة وتحسين يرفع ترتيبك.</p>
+            <p class="service-long-desc" data-i18n="s4LongDesc">تحسين بنية الموقع الفنية، وتنسيق البيانات المنظمة، والكلمات المفتاحية وسرعة التصفح لجعل موقعك متوافقاً مع معايير محركات البحث العالمية.</p>
+            <ul class="service-features-list">
+              <li data-i18n="s4Feature1">فحص فني شامل وسد ثغرات الفهرسة والزحف</li>
+              <li data-i18n="s4Feature2">بناء استراتيجية محتوى وكلمات مفتاحية مستهدفة</li>
+              <li data-i18n="s4Feature3">تحسين سرعة الصفحات ومؤشرات أداء الويب الأساسية</li>
+            </ul>
+            <div class="service-action-wrap">
+              <button class="btn-service-request" data-open-modal="seo" data-i18n="serviceCtaText">طلب هذه الخدمة</button>
+            </div>
+          </div>
+          <div class="service-preview-col">
+            <div class="serp-preview-card">
+              <div class="serp-url-row">
+                <span>https://yourbrand.com</span>
+                <span>› services › digital</span>
+              </div>
+              <h4 class="serp-headline">Your Brand: Premium Digital Solutions & Platforms</h4>
+              <p class="serp-snippet">Explore custom website design, high-speed mobile apps, and localized organic discovery engineered by KLIKA Digital.</p>
+              <div class="serp-metrics-badge">
+                <span>SEO SCORE: <strong style="color:#16e4cb;">100/100</strong></span>
+                <span>CORE WEB VITALS: <strong style="color:#1ea6f6;">PASS</strong></span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Service 05: Educational Platforms -->
+        <article class="service-card-showcase" id="service-lms">
+          <div class="service-content-col">
+            <div class="service-meta-top">
+              <span class="service-tag">05 // ACADEMY & LMS</span>
+              <span class="service-badge-pill" data-i18n="s5Feature1">بث محمي</span>
+            </div>
+            <div class="service-heading-wrap">
+              <h3 class="service-main-title" data-i18n="s5Title">منصات تعليمية</h3>
+              <span class="service-sub-title" data-i18n="s5Sub">Educational Platforms</span>
+            </div>
+            <p class="service-short-desc" data-i18n="s5Desc">منصات كورسات لطلاب حقيقيين.</p>
+            <p class="service-long-desc" data-i18n="s5LongDesc">أنظمة إدارة تعلم متكاملة تمكنك من استضافة الدورات، وحماية الفيديوهات، ومتابعة تقدم الطلاب، وإصدار الشهادات وبوابات دفع سلسة.</p>
+            <ul class="service-features-list">
+              <li data-i18n="s5Feature1">بث فيديو محمي ضد التحميل غير المصرح به</li>
+              <li data-i18n="s5Feature2">لوحة تحكم للمدرب ومسار تقدم تفاعلي للطلاب</li>
+              <li data-i18n="s5Feature3">اختبارات تفاعلية وشهادات إتمام مؤتمتة</li>
+            </ul>
+            <div class="service-action-wrap">
+              <button class="btn-service-request" data-open-modal="lms" data-i18n="serviceCtaText">طلب هذه الخدمة</button>
+            </div>
+          </div>
+          <div class="service-preview-col">
+            <div class="lms-preview-card">
+              <div class="lms-video-thumbnail">
+                <div class="lms-play-circle">▶</div>
+              </div>
+              <div class="lms-card-content">
+                <div style="font-size:13px; font-weight:700; color:var(--text-main);">الدرس الرابع: بناء استراتيجية الحضور الرقمي</div>
+                <div class="lms-progress-track">
+                  <div class="lms-progress-fill"></div>
+                </div>
+                <div style="display:flex; justify-content:space-between; font-size:11px; font-family:var(--font-mono); color:var(--text-tertiary);">
+                  <span>إنجاز الطالب: 74%</span>
+                  <span>شهادة معتمدة 🏆</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Service 06: E-commerce Stores -->
+        <article class="service-card-showcase" id="service-ecom">
+          <div class="service-content-col">
+            <div class="service-meta-top">
+              <span class="service-tag">06 // COMMERCE ARCHITECTURE</span>
+              <span class="service-badge-pill" data-i18n="s6Feature2">دفع فوري</span>
+            </div>
+            <div class="service-heading-wrap">
+              <h3 class="service-main-title" data-i18n="s6Title">متاجر إلكترونية</h3>
+              <span class="service-sub-title" data-i18n="s6Sub">E-commerce Stores</span>
+            </div>
+            <p class="service-short-desc" data-i18n="s6Desc">متاجر أونلاين بدفع سلس.</p>
+            <p class="service-long-desc" data-i18n="s6LongDesc">متاجر سريعة ومصممة لتقليل سلات الشراء المتروكة، مع ربط بوابات الدفع الإلكتروني المحلية والدولية وشركات الشحن المعتمدة.</p>
+            <ul class="service-features-list">
+              <li data-i18n="s6Feature1">تجربة شراء سلسة بخطوات مختصرة جداً</li>
+              <li data-i18n="s6Feature2">ربط الدفع الإلكتروني (مدى، آبل باي، فيزا، تابي)</li>
+              <li data-i18n="s6Feature3">إدارة سهلة للمخزون والطلبات والتخفيضات</li>
+            </ul>
+            <div class="service-action-wrap">
+              <button class="btn-service-request" data-open-modal="ecom" data-i18n="serviceCtaText">طلب هذه الخدمة</button>
+            </div>
+          </div>
+          <div class="service-preview-col">
+            <div class="ecom-preview-card">
+              <div class="ecom-item-top">
+                <span style="font-size:13px; font-weight:700; color:var(--text-main);">Signature Edition Watch</span>
+                <div class="ecom-cart-indicator">
+                  <span>🛒</span>
+                  <span class="ecom-cart-count" id="ecom-cart-count">1</span>
+                </div>
+              </div>
+              <div class="ecom-product-show">
+                [ STUDIO PRODUCT ASSET ]
+              </div>
+              <div style="display:flex; justify-content:space-between; align-items:center;">
+                <span style="font-size:18px; font-weight:800; color:#16e4cb;">1,250 SAR</span>
+                <button class="ecom-btn-add" id="ecom-add-cart-btn">+ أضف للسلة</button>
+              </div>
+              <div style="font-family:var(--font-mono); font-size:10px; color:var(--text-tertiary); text-align:center;">
+                يدعم Apple Pay · مدى · تابي · تمارا
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Service 07: Mobile Applications -->
+        <article class="service-card-showcase" id="service-mobile-apps">
+          <div class="service-content-col">
+            <div class="service-meta-top">
+              <span class="service-tag">07 // NATIVE & HYBRID APPS</span>
+              <span class="service-badge-pill" data-i18n="s7Feature1">iOS & Android</span>
+            </div>
+            <div class="service-heading-wrap">
+              <h3 class="service-main-title" data-i18n="s7Title">تطبيقات الموبايل</h3>
+              <span class="service-sub-title" data-i18n="s7Sub">Mobile Applications</span>
+            </div>
+            <p class="service-short-desc" data-i18n="s7Desc">تطبيقات iOS وAndroid بهويتك.</p>
+            <p class="service-long-desc" data-i18n="s7LongDesc">تصميم وتطوير تطبيقات الهواتف الذكية بتجربة استخدام سلسة وأداء متقدم يواكب تطلعات مستخدمي آبل وأندرويد بهوية متسقة ومتميزة.</p>
+            <ul class="service-features-list">
+              <li data-i18n="s7Feature1">واجهات مريحة ومطابقة لأحدث إرشادات iOS وAndroid</li>
+              <li data-i18n="s7Feature2">أداء رشيق وزمن استجابة فائق اللحظية</li>
+              <li data-i18n="s7Feature3">ربط إشعارات وتحديثات سحابية وإدارة بيانات آمنة</li>
+            </ul>
+            <div class="service-action-wrap">
+              <button class="btn-service-request" data-open-modal="mobile-apps" data-i18n="serviceCtaText">طلب هذه الخدمة</button>
+            </div>
+          </div>
+          <div class="service-preview-col">
+            <div class="app-device-frame">
+              <div class="app-device-notch"></div>
+              <div class="app-device-screen">
+                <div style="font-size:11px; font-weight:700; color:var(--text-main);">Welcome Back, Client</div>
+                <div class="app-screen-card">
+                  <div style="height:6px; width:50%; background:var(--brand-blue); border-radius:3px;"></div>
+                  <div style="height:6px; width:80%; background:rgba(255,255,255,0.1); border-radius:3px;"></div>
+                </div>
+                <div class="app-screen-card" style="border-color:rgba(127,82,245,0.4);">
+                  <div style="height:6px; width:70%; background:var(--brand-purple); border-radius:3px;"></div>
+                  <div style="height:6px; width:40%; background:rgba(255,255,255,0.1); border-radius:3px;"></div>
+                </div>
+                <div class="app-tab-bar">
+                  <span class="app-tab-dot active"></span>
+                  <span class="app-tab-dot"></span>
+                  <span class="app-tab-dot"></span>
+                  <span class="app-tab-dot"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Service 08: Google Ads -->
+        <article class="service-card-showcase" id="service-google-ads">
+          <div class="service-content-col">
+            <div class="service-meta-top">
+              <span class="service-tag">08 // INTENT SEARCH</span>
+              <span class="service-badge-pill" data-i18n="s8Feature1">مشترين جاهزين</span>
+            </div>
+            <div class="service-heading-wrap">
+              <h3 class="service-main-title" data-i18n="s8Title">إعلانات جوجل</h3>
+              <span class="service-sub-title" data-i18n="s8Sub">Google Ads</span>
+            </div>
+            <p class="service-short-desc" data-i18n="s8Desc">حملات بحث وعرض لمشترين جاهزين.</p>
+            <p class="service-long-desc" data-i18n="s8LongDesc">إطلاق وإدارة حملات شبكة البحث والشبكة الإعلانية للوصول إلى العملاء في اللحظة التي يبحثون فيها بالضبط عن خدماتك ومنتجاتك.</p>
+            <ul class="service-features-list">
+              <li data-i18n="s8Feature1">استهداف كلمات شرائية عالية النية والقيمة</li>
+              <li data-i18n="s8Feature2">كتابة نصوص إعلانية مقنعة ترفع نسبة النقر (CTR)</li>
+              <li data-i18n="s8Feature3">تتبع دقيق للتحويلات وتكلفة الاكتساب لتحقيق أعلى عائد</li>
+            </ul>
+            <div class="service-action-wrap">
+              <button class="btn-service-request" data-open-modal="google-ads" data-i18n="serviceCtaText">طلب هذه الخدمة</button>
+            </div>
+          </div>
+          <div class="service-preview-col">
+            <div class="google-ads-card">
+              <span class="g-ad-badge">إعلان ممول · Ad</span>
+              <h4 class="g-ad-title">شركة تصميم مواقع احترافية | اطلب عرض السعر الآن</h4>
+              <p style="font-size:12px; color:var(--text-secondary); line-height:1.5;">
+                حلول رقمية وتطبيقات فائقة التحويل لنمو أعمالك مع استوديو كليكا ديجيتال.
+              </p>
+              <div class="g-ad-sitelinks">
+                <span class="g-sitelink">✦ تصفح أعمالنا</span>
+                <span class="g-sitelink">✦ باقات التأجير</span>
+                <span class="g-sitelink">✦ حاسبة التكلفة</span>
+                <span class="g-sitelink">✦ استشارة مجانية</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Service 09: Meta Ads -->
+        <article class="service-card-showcase" id="service-meta-ads">
+          <div class="service-content-col">
+            <div class="service-meta-top">
+              <span class="service-tag">09 // CREATIVE SOCIAL</span>
+              <span class="service-badge-pill" data-i18n="s9Feature1">إنستغرام وفيسبوك</span>
+            </div>
+            <div class="service-heading-wrap">
+              <h3 class="service-main-title" data-i18n="s9Title">إعلانات ميتا</h3>
+              <span class="service-sub-title" data-i18n="s9Sub">Meta Ads</span>
+            </div>
+            <p class="service-short-desc" data-i18n="s9Desc">فيسبوك وإنستغرام للجمهور الصح.</p>
+            <p class="service-long-desc" data-i18n="s9LongDesc">حملات إعلانية مبتكرة على إنستغرام وفيسبوك مبنية على تصاميم بصرية قوية واستهداف دقيق يضمن وصول رسالتك للمهتمين الحقيقيين.</p>
+            <ul class="service-features-list">
+              <li data-i18n="s9Feature1">ابتكار تصاميم وفيديوهات إعلانية جذابة وموجهة</li>
+              <li data-i18n="s9Feature2">بناء جماهير مخصصة ومماثلة واستهداف سلوكي متقن</li>
+              <li data-i18n="s9Feature3">اختبار مستمر (A/B Testing) لتحسين نتائج وتكلفة الحملة</li>
+            </ul>
+            <div class="service-action-wrap">
+              <button class="btn-service-request" data-open-modal="meta-ads" data-i18n="serviceCtaText">طلب هذه الخدمة</button>
+            </div>
+          </div>
+          <div class="service-preview-col">
+            <div class="meta-ad-card">
+              <div class="meta-ad-profile">
+                <div class="meta-ad-avatar"></div>
+                <div>
+                  <div style="font-size:12px; font-weight:700; color:var(--text-main);">klikadigital · Sponsored</div>
+                  <div style="font-size:10px; color:var(--text-tertiary);">Riyadh, Saudi Arabia</div>
+                </div>
+              </div>
+              <div class="meta-ad-media">
+                <span style="font-size:24px;">✦</span>
+                <span>[ HIGH-CONVERTING REEL AD ]</span>
+              </div>
+              <div class="meta-ad-btn">تعرّف على المزيد / Learn More</div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ─── CRAFT AND VISUAL SHOWCASE ──────────────────────────────────────── -->
+    <section class="section-wrap" id="craft">
+      <div class="section-header">
+        <span class="section-eyebrow" data-i18n="craftEyebrow">
+          <svg width="6" height="6" viewBox="0 0 6 6"><circle cx="3" cy="3" r="3" fill="#1ea6f6" /></svg>
+          الصنعة
+        </span>
+        <h2 class="section-heading" data-i18n="craftHeading">شاشات تحسها حيّة — ديسكتوب وموبايل</h2>
+        <p class="section-lead" data-i18n="craftLead">تجارب ثنائية اللغة بحركة وتسلسل ألوان يوقف التمرير. نصمم الشاشات بدقة بكسل لا تساوم على الجمالية ولا على تجربة المستخدم اليومية.</p>
+      </div>
+
+      <div class="craft-container">
+        <!-- Desktop Monitor -->
+        <div class="craft-device-monitor">
+          <span style="font-family:var(--font-mono); font-size:11px; color:var(--brand-blue);" data-i18n="craftDesktopLabel">واجهة سطح المكتب — تحكم كامل وتدفق بصري</span>
+          <div class="monitor-frame">
+            <div class="mockup-browser-bar">
+              <div class="mockup-dots">
+                <span class="mockup-dot"></span>
+                <span class="mockup-dot"></span>
+                <span class="mockup-dot"></span>
+              </div>
+              <div class="mockup-address">https://studio.klikadigital.com</div>
+            </div>
+            <div class="monitor-screen-content">
+              <div style="font-size:18px; font-weight:700; color:var(--text-main);">LIVE STUDIO CANVAS</div>
+              <p style="font-size:13px; color:var(--text-secondary); max-width:480px;">واجهات صُممت لتمنح المستخدم إحساساً بالفخامة والسهولة المطلقة، مع أداء سلس واستجابة فورية.</p>
+              <div style="display:flex; gap:12px; margin-top:auto;">
+                <span style="font-family:var(--font-mono); font-size:11px; color:var(--brand-cyan);">● 60 FPS RENDER</span>
+                <span style="font-family:var(--font-mono); font-size:11px; color:var(--brand-purple);">● ULTRA-LOW LATENCY</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile Viewport -->
+        <div class="craft-device-phone">
+          <span style="font-family:var(--font-mono); font-size:11px; color:var(--brand-cyan);" data-i18n="craftMobileLabel">تجربة الهواتف الذكية — استجابة فورية ولمس طبيعي</span>
+          <div class="app-device-frame" style="width:220px; height:340px;">
+            <div class="app-device-notch"></div>
+            <div class="app-device-screen">
+              <div style="font-size:11px; font-weight:800; color:var(--text-main);">KLIKA MOBILE OS</div>
+              <div class="app-screen-card">
+                <div style="height:6px; width:60%; background:var(--brand-cyan); border-radius:3px;"></div>
+                <div style="height:6px; width:90%; background:rgba(255,255,255,0.08); border-radius:3px;"></div>
+              </div>
+              <div class="app-screen-card">
+                <div style="height:6px; width:40%; background:var(--brand-blue); border-radius:3px;"></div>
+                <div style="height:6px; width:75%; background:rgba(255,255,255,0.08); border-radius:3px;"></div>
+              </div>
+              <div class="app-tab-bar">
+                <span class="app-tab-dot active"></span>
+                <span class="app-tab-dot"></span>
+                <span class="app-tab-dot"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── HOW IT WORKS (METHODOLOGY) ─────────────────────────────────────── -->
+    <section class="section-wrap" id="how-it-works">
+      <div class="section-header">
+        <span class="section-eyebrow" data-i18n="howEyebrow">
+          <svg width="6" height="6" viewBox="0 0 6 6"><circle cx="3" cy="3" r="3" fill="#1ea6f6" /></svg>
+          طريقة العمل
+        </span>
+        <h2 class="section-heading" data-i18n="howHeading">خطوات واضحة. تسليم يبهر.</h2>
+        <p class="section-lead" data-i18n="howLead">نهجنا مباشر وشفاف يبدأ من فهم الغاية وينتهي بتسليم يحقق فارقاً حقيقياً لعلامتك التجارية.</p>
+      </div>
+
+      <div class="how-timeline">
+        <!-- Step 1 -->
+        <div class="how-step-card">
+          <span class="how-step-num" data-i18n="step1Num">01</span>
+          <h3 class="how-step-title" data-i18n="step1Title">اكتشاف</h3>
+          <p class="how-step-desc" data-i18n="step1Desc">أهداف وجمهور ومنافسين — ثم الحل المناسب.</p>
+          <p class="how-step-detail" data-i18n="step1Detail">نجتمع معك لتحليل أهداف عملك، ودراسة الجمهور المستهدف، واستكشاف المشهد التنافسي لتحديد النموذج التقني والتصميمي الأنسب لاحتياجك.</p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="how-step-card">
+          <span class="how-step-num" data-i18n="step2Num">02</span>
+          <h3 class="how-step-title" data-i18n="step2Title">بناء</h3>
+          <p class="how-step-desc" data-i18n="step2Desc">تصميم وتطوير بتجربة ثنائية اللغة وسرعة.</p>
+          <p class="how-step-detail" data-i18n="step2Detail">نصمم الواجهات ونبني المنصة بكود نظيف وثنائي اللغة، مع اختبارات أداء شاملة على مختلف الشاشات والأجهزة قبل أي اعتماد.</p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="how-step-card">
+          <span class="how-step-num" data-i18n="step3Num">03</span>
+          <h3 class="how-step-title" data-i18n="step3Title">نمو</h3>
+          <p class="how-step-desc" data-i18n="step3Desc">أرشفة وخرائط وإعلانات بعد الإطلاق.</p>
+          <p class="how-step-detail" data-i18n="step3Detail">نرافقك بعد الإطلاق للتأكد من فهرسة موقعك، وضبط ظهورك على الخرائط، وإطلاق حملات إعلانية تقود النمو المستمر لمشروعك.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── BLOG & INSIGHTS ────────────────────────────────────────────────── -->
+    <section class="section-wrap" id="blog">
+      <div class="section-header">
+        <span class="section-eyebrow" data-i18n="blogEyebrow">
+          <svg width="6" height="6" viewBox="0 0 6 6"><circle cx="3" cy="3" r="3" fill="#1ea6f6" /></svg>
+          المدونة المعرفية
+        </span>
+        <h2 class="section-heading" data-i18n="blogHeading">رؤى وأفكار من استوديو كليكا</h2>
+        <p class="section-lead" data-i18n="blogLead">مقالات وأدلة عملية يكتبها فريقنا لمساعدة رواد الأعمال والمطورين على فهم المشهد الرقمي الحديث وبناء مشاريع ناجحة.</p>
+      </div>
+
+      <!-- Filters -->
+      <div class="blog-filters-row">
+        <button class="blog-filter-btn active" data-cat="all" data-i18n="blogFilterAll">كافة المقالات</button>
+        <button class="blog-filter-btn" data-cat="strategy" data-i18n="blogFilterStrategy">الاستراتيجية الرقمية</button>
+        <button class="blog-filter-btn" data-cat="ux" data-i18n="blogFilterUx">التصميم وتجربة المستخدم</button>
+        <button class="blog-filter-btn" data-cat="growth" data-i18n="blogFilterGrowth">الأرشفة والنمو</button>
+      </div>
+
+      <!-- Blog Grid (Populated via blog.js) -->
+      <div class="blog-grid" id="blog-grid"></div>
+    </section>
+
+    <!-- ─── FINAL CALL TO ACTION ───────────────────────────────────────────── -->
+    <section class="final-cta-wrap" id="final-cta">
+      <div class="final-cta-card">
+        <span class="section-eyebrow" style="color:var(--brand-cyan);">
+          ✦ KLIKA DIGITAL 2026
+        </span>
+        <h2 class="final-cta-title" data-i18n="finalHeading">جاهز تبدأ؟</h2>
+        <p class="final-cta-desc" data-i18n="finalLead">اختر الخدمة اللي تحتاجها. كل فورم مخصّص — بدون رفع غير ضروري أو إجراءات معقدة.</p>
+        <div class="final-cta-actions">
+          <a href="#services" class="btn-secondary-large" data-i18n="finalBrowseBtn">تصفّح الخدمات</a>
+          <button class="btn-primary-large" data-open-modal="web-design" data-i18n="finalStartBtn">ابدأ مشروعك الآن</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ─── SITE FOOTER ──────────────────────────────────────────────────────── -->
+  <footer class="site-footer" id="contact">
+    <div class="footer-inner">
+      <!-- Col 1: Brand & Bio -->
+      <div class="footer-brand-col">
+        <div class="header-brand">
+          <svg class="header-logo-svg" viewBox="0 0 64 64">
+            <rect x="14" y="12" width="10" height="40" rx="5" fill="#1ea6f6" />
+            <path d="M30 14 C36 14 48 20 48 28 C48 34 38 40 30 40 Z" fill="#7f52f5" />
+            <path d="M32 40 C36 34 44 34 46 42 C48 48 40 52 34 50 Z" fill="#16e4cb" />
+          </svg>
+          <span class="header-brand-name">KLIKA DIGITAL</span>
+        </div>
+        <p class="footer-tagline" data-i18n="footerTagline">استوديو تجارب رقمية متقدم، نصنع منصات وحلول تدفع علامتك التجارية للأمام.</p>
+      </div>
+
+      <!-- Col 2: Nine Services -->
+      <div>
+        <h4 class="footer-col-title" data-i18n="footerServicesTitle">الخدمات</h4>
+        <ul class="footer-links-list">
+          <li><a href="#service-web-design" data-i18n="s1Title">تصميم مواقع</a></li>
+          <li><a href="#service-web-rental" data-i18n="s2Title">تأجير مواقع</a></li>
+          <li><a href="#service-google-maps" data-i18n="s3Title">خرائط جوجل</a></li>
+          <li><a href="#service-seo" data-i18n="s4Title">أرشفة مواقع</a></li>
+          <li><a href="#service-lms" data-i18n="s5Title">منصات تعليمية</a></li>
+          <li><a href="#service-ecom" data-i18n="s6Title">متاجر إلكترونية</a></li>
+          <li><a href="#service-mobile-apps" data-i18n="s7Title">تطبيقات الموبايل</a></li>
+          <li><a href="#service-google-ads" data-i18n="s8Title">إعلانات جوجل</a></li>
+          <li><a href="#service-meta-ads" data-i18n="s9Title">إعلانات ميتا</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3: Company Navigation -->
+      <div>
+        <h4 class="footer-col-title" data-i18n="footerCompanyTitle">الشركة</h4>
+        <ul class="footer-links-list">
+          <li><a href="#standard" data-i18n="navStandard">معيار كليكا</a></li>
+          <li><a href="#craft" data-i18n="navCraft">الصنعة</a></li>
+          <li><a href="#how-it-works" data-i18n="navHow">طريقة العمل</a></li>
+          <li><a href="#blog" data-i18n="navBlog">المدونة المعرفية</a></li>
+          <li><a href="#hero-stage" data-action="reassemble-logo" data-i18n="reassembleBtn">إعادة تجميع الشعار</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 4: Verified Contact Info -->
+      <div>
+        <h4 class="footer-col-title" data-i18n="footerConnectTitle">تواصل معنا</h4>
+        <ul class="footer-links-list">
+          <li><a href="mailto:support@klikadigital.com">support@klikadigital.com</a></li>
+          <li><a href="mailto:info@klikadigital.com">info@klikadigital.com</a></li>
+          <li style="color:var(--text-tertiary); font-family:var(--font-mono); font-size:12px;" data-i18n="footerLocation">الرياض · دبي</li>
+          <li style="margin-top:8px;">
+            <button class="btn-lang" data-open-modal="web-design" data-i18n="ctaStart">ابدأ مشروعك</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="footer-bottom-bar">
+      <span data-i18n="footerRights">© 2026 كليكا ديجيتال · جميع الحقوق محفوظة.</span>
+      <span>KLIKA DIGITAL // HIGH-PRECISION STUDIO EXPERIENCE</span>
+    </div>
+  </footer>
+
+  <!-- ─── INTERACTIVE SERVICE PROJECT BRIEF MODAL ─────────────────────────── -->
+  <div class="modal-overlay" id="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-main-title">
+    <div class="modal-backdrop" id="modal-backdrop"></div>
+    <div class="modal-container">
+      <button class="modal-close-btn" id="btn-modal-close" aria-label="Close Project Modal">✕</button>
+
+      <div class="modal-header">
+        <h3 class="modal-title" id="modal-main-title" data-i18n="modalTitle">طلب مشروع جديد</h3>
+        <p class="modal-subtitle" data-i18n="modalSubtitle">اختر الخدمة واملأ التفاصيل المخصصة لنبدأ فوراً في دراسة طلبك.</p>
+      </div>
+
+      <form class="modal-form" id="project-form" novalidate>
+        <!-- Service Selector -->
+        <div class="form-group">
+          <label class="form-label" for="modal-service-select">
+            <span data-i18n="formSelectServiceLabel">نوع الخدمة المطلوبة</span> <span class="req-star">*</span>
+          </label>
+          <div class="select-wrap">
+            <select id="modal-service-select" name="service_id" class="form-input">
+              <option value="web-design">تصميم مواقع (Website Design)</option>
+              <option value="web-rental">تأجير مواقع (Website Rental)</option>
+              <option value="google-maps">خرائط جوجل (Google Maps)</option>
+              <option value="seo">أرشفة مواقع (SEO)</option>
+              <option value="lms">منصات تعليمية (Educational Platforms)</option>
+              <option value="ecom">متاجر إلكترونية (E-commerce Stores)</option>
+              <option value="mobile-apps">تطبيقات الموبايل (Mobile Applications)</option>
+              <option value="google-ads">إعلانات جوجل (Google Ads)</option>
+              <option value="meta-ads">إعلانات ميتا (Meta Ads)</option>
+            </select>
+            <div class="select-chevron">▾</div>
+          </div>
+        </div>
+
+        <!-- Dynamic Service Custom Fields -->
+        <div id="modal-custom-fields"></div>
+
+        <!-- Client Name -->
+        <div class="form-group">
+          <label class="form-label" for="client-name-input">
+            <span data-i18n="formClientName">اسمك الكريم أو اسم الشركة</span> <span class="req-star">*</span>
+          </label>
+          <input type="text" id="client-name-input" name="client_name" class="form-input" placeholder="محمد السعدي / شركة الآفاق الرقمية" required />
+        </div>
+
+        <!-- Client Email -->
+        <div class="form-group">
+          <label class="form-label" for="client-email-input">
+            <span data-i18n="formEmail">البريد الإلكتروني المهني</span> <span class="req-star">*</span>
+          </label>
+          <input type="email" id="client-email-input" name="client_email" class="form-input" placeholder="name@company.com" required />
+        </div>
+
+        <!-- Client Phone / WhatsApp -->
+        <div class="form-group">
+          <label class="form-label" for="client-phone-input">
+            <span data-i18n="formPhone">رقم الجوال أو واتساب</span> <span class="req-star">*</span>
+          </label>
+          <input type="tel" id="client-phone-input" name="client_phone" class="form-input" placeholder="+966 50 000 0000" required />
+        </div>
+
+        <!-- Notes -->
+        <div class="form-group">
+          <label class="form-label" for="client-notes-input" data-i18n="formNotes">تفاصيل أو متطلبات إضافية</label>
+          <textarea id="client-notes-input" name="client_notes" class="form-textarea" rows="3" placeholder="أي معلومات أو أهداف تود مشاركتها معنا..."></textarea>
+        </div>
+
+        <button type="submit" class="form-submit-btn" data-i18n="formSubmitBtn">إرسال الطلب الآن</button>
+      </form>
+
+      <!-- Submission Feedback / Honest local handler -->
+      <div class="modal-success-box" id="modal-success-box">
+        <div class="success-icon">✓</div>
+        <h4 style="font-size:20px; font-weight:800; color:var(--text-main);" data-i18n="formSuccessTitle">تم استلام طلبك بنجاح!</h4>
+        <p style="font-size:14px; color:var(--text-secondary); line-height:1.6;" data-i18n="formSuccessDesc">شكراً لثقتك في كليكا. سيقوم فريقنا بمراجعة تفاصيل طلبك والتواصل معك خلال ساعات العمل.</p>
+        <a id="modal-wa-link" href="#" target="_blank" rel="noopener" class="btn-whatsapp-direct" data-i18n="formSuccessWhatsapp">
+          تواصل فوري عبر واتساب
+        </a>
+        <button class="btn-lang" id="btn-success-close" style="margin-top:10px;" data-i18n="formSuccessClose">إغلاق النافذة</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── BLOG ARTICLE READER MODAL ────────────────────────────────────────── -->
+  <div class="modal-overlay" id="blog-reader-modal" role="dialog" aria-modal="true">
+    <div class="modal-backdrop" id="reader-backdrop"></div>
+    <div class="modal-container reader-container">
+      <button class="modal-close-btn" id="btn-reader-close" aria-label="Close Article Reader">✕</button>
+      <div class="reader-header">
+        <div style="display:flex; gap:12px; font-family:var(--font-mono); font-size:11px;">
+          <span id="reader-tag" style="color:var(--brand-blue); text-transform:uppercase;"></span>
+          <span id="reader-read-time" style="color:var(--text-tertiary);"></span>
+        </div>
+        <h2 id="reader-title" style="font-size: clamp(22px, 3vw, 32px); font-weight:800; line-height:1.3; color:var(--text-main);"></h2>
+      </div>
+      <div class="reader-body" id="reader-body"></div>
+      <div style="margin-top:32px; padding-top:20px; border-top:1px solid var(--border-subtle); display:flex; justify-content:space-between; align-items:center;">
+        <button class="btn-lang" data-action="close-blog-reader" data-i18n="blogBackBtn">العودة لقائمة المقالات</button>
+        <button class="btn-service-request" data-action="close-reader-open-modal" data-open-modal="web-design" data-i18n="ctaStart">ابدأ مشروعك</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Global Toast -->
+  <div class="global-toast" id="global-toast" role="status" aria-live="polite"></div>
+
+  <!-- Core Application Scripts -->
+  <script src="js/translations.js"></script>
+  <script src="js/hero3d.js"></script>
+  <script src="js/services.js"></script>
+  <script src="js/blog.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
